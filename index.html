@@ -33,6 +33,7 @@ top:0;
 width:100%;
 background:#4a4f57;
 z-index:100;
+padding:12px 20px;
 }
 
 .nav-container{
@@ -41,7 +42,6 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:12px 20px;
 }
 
 .logo{
@@ -59,6 +59,7 @@ list-style:none;
 .nav-links li{
 color:#d0d0d0;
 cursor:pointer;
+font-size:14px;
 }
 
 /* =========================
@@ -68,6 +69,7 @@ cursor:pointer;
 height:100vh;
 position:relative;
 overflow:hidden;
+margin-top:52px;
 }
 
 .hero-bg{
@@ -78,6 +80,7 @@ width:100%;
 height:100%;
 background:url("VIDHAN_MAIN.png") center/cover no-repeat;
 z-index:1;
+background-attachment:fixed;
 }
 
 .overlay{
@@ -92,9 +95,9 @@ z-index:2;
 
 .hero-content{
 position:absolute;
-bottom:100px;
+bottom:50%;
 left:50%;
-transform:translateX(-50%);
+transform:translate(-50%, 50%);
 text-align:center;
 width:100%;
 z-index:3;
@@ -102,12 +105,16 @@ display:flex;
 flex-direction:column;
 align-items:center;
 gap:20px;
+padding:0 20px;
 }
 
 .hero-content h1{
 font-size:72px;
 font-weight:400;
 letter-spacing:-1px;
+color:#fff;
+text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+line-height:1.2;
 }
 
 .hero-profile{
@@ -119,19 +126,24 @@ display:none;
 ========================= */
 .intro{
 max-width:900px;
-margin:80px auto;
+margin:60px auto;
 text-align:center;
 padding:0 20px;
+background:#1a1a1a;
+padding:40px 20px;
+border-radius:12px;
 }
 
 .intro-line1{
 font-size:22px;
 margin-bottom:20px;
+font-weight:500;
 }
 
 .intro-line2{
-font-size:18px;
+font-size:16px;
 color:#b5b5b5;
+line-height:1.8;
 }
 
 /* =========================
@@ -153,6 +165,12 @@ gap:25px;
 height:260px;
 overflow:hidden;
 border-radius:18px;
+box-shadow:0 8px 24px rgba(0,0,0,0.4);
+transition:transform 0.3s ease;
+}
+
+.grid-item:hover{
+transform:scale(1.02);
 }
 
 .grid-item img{
@@ -173,18 +191,22 @@ text-align:center;
 .cert-title{
 font-size:13px;
 letter-spacing:3px;
-color:#aaa;
+color:#f4a623;
+text-transform:uppercase;
 }
 
 .cert-heading{
 font-size:40px;
 margin:10px 0;
+font-weight:600;
 }
 
 .cert-text{
 max-width:600px;
 margin:auto;
 color:#ccc;
+line-height:1.8;
+font-size:16px;
 }
 
 /* DROPDOWN (DESKTOP ONLY) */
@@ -203,6 +225,7 @@ max-height:1000px;
 .cert-dropdown img{
 width:100%;
 border-radius:12px;
+box-shadow:0 8px 24px rgba(0,0,0,0.4);
 }
 
 /* =========================
@@ -220,11 +243,13 @@ color:#f4a623;
 letter-spacing:3px;
 font-size:13px;
 margin-bottom:10px;
+text-transform:uppercase;
 }
 
 .client-heading{
 font-size:42px;
 margin-bottom:15px;
+font-weight:600;
 }
 
 .client-subtext{
@@ -232,14 +257,24 @@ color:#a5a5a5;
 max-width:700px;
 margin:auto;
 margin-bottom:25px;
+font-size:16px;
+line-height:1.8;
 }
 
 .client-logos{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:20px;
+gap:15px;
 margin-bottom:25px;
+}
+
+.client-logos span{
+background:#222;
+padding:8px 16px;
+border-radius:20px;
+font-size:14px;
+border:1px solid #333;
 }
 
 /* VIDEO TEXT */
@@ -250,12 +285,13 @@ color:#d0d0d0;
 margin:20px auto;
 max-width:700px;
 line-height:1.6;
+font-weight:500;
 }
 
 /* VIDEO BOX */
 .client-video{
 margin-top:30px;
-border-radius:40px;
+border-radius:20px;
 overflow:hidden;
 position:relative;
 }
@@ -275,15 +311,17 @@ margin:0 auto 20px auto;
 width:100%;
 height:380px;
 border:none;
-border-radius:40px;
+border-radius:20px;
 display:block;
+box-shadow:0 8px 24px rgba(0,0,0,0.4);
 }
 
 /* MOBILE VIDEO */
 @media(max-width:768px){
 .client-video iframe{
-height:300px;
+height:250px;
 width:100%;
+border-radius:12px;
 }
 
 .client-video-text{
@@ -296,13 +334,15 @@ padding:0 10px;
    FOOTER
 ========================= */
 .footer{
-padding:70px 20px;
+padding:60px 20px;
 background:#000;
+margin-top:60px;
 }
 
 .footer-heading{
 text-align:center;
 margin-bottom:40px;
+font-size:24px;
 }
 
 .footer-container{
@@ -310,6 +350,33 @@ display:flex;
 justify-content:space-around;
 flex-wrap:wrap;
 gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.footer-col{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.footer-col h4{
+font-weight:600;
+margin-bottom:10px;
+}
+
+.footer-col p{
+font-size:14px;
+color:#aaa;
+}
+
+.footer-col a{
+color:#f4a623;
+text-decoration:none;
+}
+
+.footer-col a:hover{
+text-decoration:underline;
 }
 
 /* LOGO */
@@ -325,66 +392,104 @@ width:100px;
 height:100px;
 border-radius:50%;
 object-fit:cover;
+border:2px solid #f4a623;
+}
+
+.footer-logo p{
+font-weight:600;
+color:#fff;
 }
 
 /* =========================
-   MOBILE
+   MOBILE OPTIMIZATION
 ========================= */
 @media(max-width:768px){
 
 /* NAV */
+.nav{
+padding:10px 15px;
+}
+
 .nav-links{
 display:none;
 }
 
+.logo{
+font-size:14px;
+}
+
 /* HERO */
 .hero{
-height:auto;
-min-height:70vh;
+height:60vh;
+margin-top:50px;
+}
+
+.hero-bg{
+background-attachment:scroll;
 }
 
 .hero-content{
-bottom:60px;
+bottom:50%;
+padding:0 15px;
+gap:15px;
 }
 
 .hero-content h1{
-font-size:32px;
-padding:0 10px;
-}
-
-.hero-profile{
-width:100px;
-height:100px;
+font-size:36px;
+letter-spacing:0px;
+word-break:break-word;
 }
 
 /* INTRO */
 .intro{
 margin:40px auto;
+padding:30px 15px;
+border-radius:8px;
 }
 
 .intro-line1{
 font-size:18px;
+margin-bottom:15px;
 }
 
 .intro-line2{
-font-size:15px;
+font-size:14px;
 }
 
 /* GRID */
+.grid-section{
+margin:50px auto;
+padding:0 15px;
+}
+
 .grid-container{
 grid-template-columns:1fr;
-gap:12px;
+gap:15px;
 }
 
 .grid-item{
-height:170px;
+height:200px;
 border-radius:12px;
 }
 
-/* CERTIFICATE STATIC */
+/* CERTIFICATE */
+.certificate{
+padding:50px 15px;
+}
+
+.cert-heading{
+font-size:28px;
+}
+
+.cert-text{
+font-size:14px;
+max-width:100%;
+}
+
+/* CERT DROPDOWN STATIC ON MOBILE */
 .cert-dropdown{
 max-height:none !important;
-overflow:hidden;
+overflow:visible !important;
 margin-top:20px;
 }
 
@@ -392,9 +497,14 @@ margin-top:20px;
 max-height:none;
 }
 
+.cert-dropdown img{
+border-radius:8px;
+}
+
 /* CLIENTS */
 .clients{
 margin:60px auto;
+padding:0 15px;
 }
 
 .client-heading{
@@ -402,28 +512,121 @@ font-size:26px;
 }
 
 .client-subtext{
-font-size:15px;
+font-size:14px;
 }
 
 .client-logos{
-gap:12px;
+gap:10px;
+margin-bottom:20px;
 }
 
-/* NEWSLETTER */
-.newsletter h2{
-font-size:24px;
+.client-logos span{
+padding:6px 12px;
+font-size:12px;
+border-radius:16px;
+}
+
+.client-video-text{
+font-size:14px;
+padding:0 10px;
+margin:15px auto;
+}
+
+.client-video::before{
+width:40px;
+height:1.5px;
+margin:0 auto 15px auto;
 }
 
 /* FOOTER */
+.footer{
+padding:40px 15px;
+margin-top:40px;
+}
+
+.footer-heading{
+font-size:18px;
+margin-bottom:30px;
+}
+
 .footer-container{
 flex-direction:column;
 align-items:center;
 text-align:center;
+gap:25px;
+}
+
+.footer-col{
+align-items:center;
+text-align:center;
+}
+
+.footer-col p{
+font-size:13px;
 }
 
 .footer-logo img{
 width:80px;
 height:80px;
+}
+
+.footer-logo p{
+font-size:14px;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+width: 55px;
+height: 55px;
+bottom: 20px;
+right: 20px;
+}
+
+.whatsapp-float img {
+width: 28px;
+height: 28px;
+}
+
+}
+
+/* SMALL PHONES (max-width: 480px) */
+@media(max-width:480px){
+
+.hero-content h1{
+font-size:28px;
+}
+
+.intro{
+margin:30px auto;
+padding:20px 12px;
+}
+
+.intro-line1{
+font-size:16px;
+}
+
+.intro-line2{
+font-size:13px;
+}
+
+.grid-item{
+height:160px;
+}
+
+.client-heading{
+font-size:20px;
+}
+
+.client-subtext{
+font-size:13px;
+}
+
+.footer-heading{
+font-size:16px;
+}
+
+.footer-col p{
+font-size:12px;
 }
 
 }
@@ -464,20 +667,6 @@ height: 32px;
 transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
-.whatsapp-float {
-width: 55px;
-height: 55px;
-bottom: 15px;
-right: 15px;
-}
-
-.whatsapp-float img {
-width: 28px;
-height: 28px;
-}
-}
-
 /* BRAND LOGOS SECTION */
 .brand-logos {
 background: #000;
@@ -503,12 +692,26 @@ transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
+.brand-logos {
+padding: 30px 15px;
+}
+
 .logo-container {
-gap: 25px;
+gap: 20px;
 }
 
 .logo-container img {
-height: 28px;
+height: 25px;
+}
+}
+
+@media (max-width: 480px) {
+.logo-container {
+gap: 15px;
+}
+
+.logo-container img {
+height: 20px;
 }
 }
 
@@ -544,9 +747,7 @@ height: 28px;
 <div class="overlay"></div>
 
 <div class="hero-content">
-
 <h1>Master the image.</h1>
-
 </div>
 
 </section>
@@ -554,11 +755,11 @@ height: 28px;
 <!-- INTRO -->
 <section class="intro">
 <p class="intro-line1">
-I'm Vidhan Bommalla - IMDb listed colorist,storyteller and editor
+I'm Vidhan Bommalla - IMDb listed colorist, storyteller and editor
 </p>
 
 <p class="intro-line2">
-For 4 years, I've been crafting visual stories through cinematic editing and expert color grading. As a Cannes International Film Festival nominated colorist, my work has transformed my collaborator[.[...]
+For 4 years, I've been crafting visual stories through cinematic editing and expert color grading. As a Cannes International Film Festival nominated colorist, my work has transformed my collaborators' visions into award-nominated films.
 </p>
 </section>
 
@@ -568,11 +769,11 @@ For 4 years, I've been crafting visual stories through cinematic editing and exp
 <div class="grid-container">
 
 <div class="grid-item">
-<img src="image1.jpg.jpeg">
+<img src="image1.jpg.jpeg" alt="Work portfolio">
 </div>
 
 <div class="grid-item">
-<img src="image2.jpg.jpeg">
+<img src="image2.jpg.jpeg" alt="Work portfolio">
 </div>
 
 <div class="grid-item">
@@ -585,18 +786,19 @@ For 4 years, I've been crafting visual stories through cinematic editing and exp
 
 </div>
 
+</section>
+
 <!-- DAVINCI CERTIFICATE SECTION -->
 <section class="certificate">
 
-  <h3 class="cert-title">CERTIFICATION</h3>
+  <h3 class="cert-title">Certification</h3>
 
   <h1 class="cert-heading">
     DaVinci Resolve Certified Editor
   </h1>
 
   <p class="cert-text">
-    Certified in DaVinci Resolve with professional training in color grading, editing workflows, and cinematic post-production.
-    I specialize in delivering industry-level visuals using advanced color science, node-based grading, and storytelling techniques
+    Certified in DaVinci Resolve with professional training in color grading, editing workflows, and cinematic post-production. I specialize in delivering industry-level visuals using advanced color science, node-based grading, and storytelling techniques.
   </p>
 
   <div class="cert-dropdown">
@@ -625,26 +827,22 @@ For 4 years, I've been crafting visual stories through cinematic editing and exp
 <!-- CLIENTS + VIDEO SECTION -->
 <section class="clients">
 
-<!-- TITLE -->
-<p class="client-tag">CLIENTS</p>
+<p class="client-tag">Clients</p>
 
 <h2 class="client-heading">
 Trusted by creators who grow with content
 </h2>
 
 <p class="client-subtext">
-I work with filmmakers, brands, content creators and travel documentaries
-to create rhythmic storytelling and calibrated visual tones
+I work with filmmakers, brands, content creators and travel documentaries to create rhythmic storytelling and calibrated visual tones
 </p>
 
-<!-- CLIENT TYPES (LOGO STYLE TEXT) -->
+<!-- CLIENT TYPES -->
 <div class="client-logos">
-
 <span>Directors</span>
 <span>Documentaries</span>
 <span>YouTube Creators</span>
 <span>Brands</span>
-
 </div>
 
 <!-- VIDEO SHOWCASE -->
@@ -653,7 +851,6 @@ to create rhythmic storytelling and calibrated visual tones
 <b>The look that reached <i>Cannes.</i> Watch my work for the English film '10 DAYS APART'</b>
 </p>
   <div class="client-video">
-  
   <iframe 
     src="https://www.youtube.com/embed/xyWbiLv_jnI"
     title="YouTube video"
@@ -677,10 +874,8 @@ Editing, storytelling, and cinematic visuals for Film Makers
 
 <!-- LOGO -->
 <div class="footer-logo">
-
-<img src="logo.jpg">
+<img src="logo.jpg" alt="CUT2VIDHAN Logo">
 <p>CUT2VIDHAN</p>
-
 </div>
 
 <!-- RESOURCES -->
@@ -694,8 +889,9 @@ Editing, storytelling, and cinematic visuals for Film Makers
 
 <!-- SOCIAL -->
 <div class="footer-col">
-<p> <a href="https://www.instagram.com/cut2vidhan?igsh=bWczanhoZnVwZDkz">Instagram </a> </p>
-<p>YouTube</p>
+<h4>Connect</h4>
+<p> <a href="https://www.instagram.com/cut2vidhan?igsh=bWczanhoZnVwZDkz">Instagram</a> </p>
+<p><a href="https://www.youtube.com/@cut2vidhan">YouTube</a></p>
 </div>
 
 </div>
@@ -704,14 +900,6 @@ Editing, storytelling, and cinematic visuals for Film Makers
 
 <script>
 console.log("CUTTOVIDHAN Website Loaded");
-
-// Handle hero profile image
-document.addEventListener('DOMContentLoaded', function() {
-  const profileImg = document.querySelector('.hero-profile');
-  if (profileImg) {
-    profileImg.style.display = 'block';
-  }
-});
 
 // Video pause on scroll
 const videos = document.querySelectorAll('iframe');
